@@ -1,0 +1,30 @@
+.languageSwitcher {
+  display: flex;
+  gap: 0.25rem;
+  background: var(--bg-secondary);
+  padding: 0.25rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--border-color);
+}
+
+.langBtn {
+  background: transparent;
+  border: none;
+  padding: 0.375rem 0.75rem;
+  border-radius: 0.375rem;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.langBtn:hover {
+  color: var(--text-primary);
+  background: var(--bg-hover);
+}
+
+.langBtn.active {
+  color: white;
+  background: var(--primary-gradient);
+}
