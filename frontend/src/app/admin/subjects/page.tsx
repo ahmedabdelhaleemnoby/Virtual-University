@@ -151,9 +151,18 @@ export default function AdminSubjectsPage() {
               {subjects.map(s => (
                 <tr key={s.id}>
                   <td>{s.title}</td>
-                  <td>\${s.price}</td>
+                  <td>${s.price}</td>
                   <td>
-                    <button className={styles.adminButton} style={{ background: '#10b981' }}>Edit Details</button>
+                    <div style={{ display: 'flex', gap: '0.5rem' }}>
+                      <a 
+                        href={`/admin/subjects/${s.id}/lectures`}
+                        className={styles.adminButton} 
+                        style={{ background: 'var(--primary-gradient)', textDecoration: 'none', fontSize: '0.8rem', padding: '0.5rem 1rem' }}
+                      >
+                        Manage Lectures
+                      </a>
+                      <button className={styles.adminButton} style={{ background: '#10b981', fontSize: '0.8rem', padding: '0.5rem 1rem' }}>Edit Details</button>
+                    </div>
                   </td>
                 </tr>
               ))}
